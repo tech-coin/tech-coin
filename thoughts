@@ -15,3 +15,9 @@ THIS .TXT HOLDS MY THOUGHTS ON $TECH AND ALL TECH RELATED THINGS.
 -run the crop script 
 -developing is extremely hard, and you have to be a §HARD§ developer to dev, vibe coders are like the hunters and gatherers at the conception of man (vibe coders will be conceiving a new man(yes, male vibecoders have the power of pregnancy))
 - fuck, the banner cropping script has hardcoded outputs, the ai has failed me
+
+python3 banner.py /Users/user/Library/Containers/com.apple.share.System.add-to-iphoto/Data/tmp/img1.jpg
+
+python3 banner.py /Users/user/Library/Containers/com.apple.share.System.add-to-iphoto/Data/tmp/img2.jpg
+
+saving these here to rerun after edits to the script! $TECH go!!
