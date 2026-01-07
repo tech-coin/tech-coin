@@ -9,3 +9,9 @@ the most technical coin
 this coin is extremely technical and this github repo proves it 
 
 72UHUiqnG4dhqG8hccUDkw4bnLK1RAb7T2WJEbsipump
+
+repo has all previous development stages and future development will be pushed
+
+let the $TECH prove itself
+
+
