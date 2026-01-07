@@ -1,3 +1,6 @@
+
+# script for cropping the banners i made in the banner pdf (100% vibe coded (with vibes( - vibeoshi codeamoto)))
+
 #!/usr/bin/env python3
 from PIL import Image
 import argparse
