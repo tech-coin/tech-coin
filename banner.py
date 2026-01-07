@@ -1,10 +1,8 @@
-
-# script for cropping the banners i made in the banner pdf (100% vibe coded (with vibes( - vibeoshi codeamoto)))
-
 #!/usr/bin/env python3
 from PIL import Image
 import argparse
 from pathlib import Path
+from datetime import datetime
 
 def main():
     ap = argparse.ArgumentParser(description="Cut a 1:1 image into 3 stacked 3:1 banners.")
@@ -30,14 +28,19 @@ def main():
         im = im.crop((pad, pad, pad + s3, pad + s3))
         s = s3
 
-    band_h = s // 3  # so width:s = 3*band_h => 3:1
+    band_h = s // 3  # width == 3 * height
+
+    # Unique run id (timestamp + short input hash)
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    run_dir = outdir / f"{args.prefix}_{ts}"
+    run_dir.mkdir(parents=True, exist_ok=False)
 
     for i in range(3):
         y0 = i * band_h
         crop = im.crop((0, y0, s, y0 + band_h))
-        crop.save(outdir / f"{args.prefix}_{i+1}_3x1.png")
+        crop.save(run_dir / f"{args.prefix}_{ts}_{i+1}_3x1.png")
 
-    print(f"Saved 3 banners to: {outdir.resolve()}")
+    print(f"Saved 3 banners to: {run_dir.resolve()}")
 
 if __name__ == "__main__":
     main()
